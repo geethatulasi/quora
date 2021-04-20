@@ -1,0 +1,11 @@
+<div class="col-md-8">
+  <h4>From:<%= @question.user.name %></h4>
+  <h4>At:<%= @question.created_at.strftime("%A,%b %d,%Y %I:%m %p") %></h4>
+  <h4><%= @question.title %></h4>
+  <p><%= @question.description %></p>
+  <div class="col-md-12">
+    <h3>answers</h3>
+    <%= render @question.answers %>
+    <%= render partial:'answers/form' %>
+  </div>
+</div>

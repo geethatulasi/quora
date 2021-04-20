@@ -1,0 +1,12 @@
+<ul class="list-group">
+  <% topics.each do |topic| %>
+    <li class="list-group-item">
+      <%= topic.name %>
+      <% if current_user.topics.include?(topic) %>
+        <%= link_to "unfollow",unfollow_topic_path(topic),method: :post %>
+      <% else %>
+        <%= link_to "follow",follow_topic_path(topic),method: :post %>
+      <% end %>
+    </li>
+  <% end %>
+</ul>

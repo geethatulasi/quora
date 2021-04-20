@@ -1,0 +1,6 @@
+<div class="col-md-8">
+  <%= link_to "Create Topic",new_topic_path,class: 'btn btn-info' %>
+  <div class="row">
+    <%= render partial:'topics',locals:{topics:@topics} %>
+  </div>
+</div>

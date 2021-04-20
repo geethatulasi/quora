@@ -1,0 +1,7 @@
+<ul class="list-group">
+  <% answers.each do |answer| %>
+    <li class="list-group-item">
+      <%= render partial: 'answers/answer',locals:{answer:answer} %>
+    </li>
+  <% end %>
+</ul>

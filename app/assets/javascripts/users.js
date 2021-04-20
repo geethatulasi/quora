@@ -1,0 +1,37 @@
+$(document).on('turbolinks:load',function(){
+  $('#questions').on('click',function(){
+    $('.questions').show();
+    $('.answers').hide();
+    $('.topics').hide();
+    $('.followings').hide();
+    $('.followers').hide();
+  })
+  $('#answers').on('click',function(){
+    $('.answers').show();
+    $('.questions').hide();
+    $('.topics').hide();
+    $('.followings').hide();
+    $('.followers').hide();
+  })
+  $('#topics').on('click',function(){
+    $('.topics').show();
+    $('.questions').hide();
+    $('.answers').hide();
+    $('.followings').hide();
+    $('.followers').hide();
+  })
+  $('#followings').on('click',function(){
+    $('.followings').show();
+    $('.questions').hide();
+    $('.answers').hide();
+    $('.topics').hide();
+    $('.followers').hide();
+  })
+  $('#followers').on('click',function(){
+    $('.followers').show();
+    $('.questions').hide();
+    $('.answers').hide();
+    $('.topics').hide();
+    $('.followings').hide();
+  })
+})

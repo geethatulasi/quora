@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Quora</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+    <%= render 'layouts/nav' %>
+    <div class="container">
+      <% if user_signed_in? %>
+        <%= render partial:'home/home_links' %>
+      <% end %>
+      <%= yield %>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,52 @@
+<div class="col-md-8">
+  <div class="user-info">
+    <div class="avatar">
+      <% if @user.profile.present? %>
+        <%= image_tag profile.avatar %>
+      <% else %>
+        <image src="http://www.goodmorningimagesdownload.com/wp-content/uploads/2020/07/Beautiful-Profile-Images-4.jpg" >
+      <% end %>
+    </div>
+    <div class="basic-info">
+      <h4 class="user-name"><%= @user.name %></h4>
+      <span><%= @questions.count %> Questions</span>
+      <span><%= @answers.count %> Answers</span>
+      <span><%= @followings.count %> Followings</span>
+      <span><%= @followers.count %> Followers</span>
+    </div>
+  </div>
+</div>
+<div class="col-md-12">
+  <div class="user-tabs">
+    <%= link_to('javascript:;',:id=>:questions) do %>
+      <i class="fa fa-question-circle"></i>Questions
+    <% end %>
+    <%= link_to('javascript:;',:id=>:answers) do %>
+      <i class="fa fa-sticky-note"></i>Answers
+    <% end %>
+    <%= link_to('javascript:;',:id=>:topics) do %>
+      <i class="fa fa-clipboard"></i>Topics
+    <% end %>
+    <%= link_to('javascript:;',:id=>:followings) do %>
+      <i class="fa fa-users"></i>Followings
+    <% end %>
+    <%= link_to('javascript:;',:id=>:followers) do %>
+      <i class="fa fa-users"></i>Followers
+    <% end %>
+  </div>
+  <div class="questions">
+    <%= render partial:'questions/question',collection:@questions %>
+  </div>
+  <div class="answers">
+    <%= render partial:'answers/answers',locals:{answers:@answers} %>
+  </div>
+  <div class="topics">
+    <%= render partial:'topics/topics',locals:{topics:@topics} %>
+  </div>
+  <div class="followings">
+    <%= render partial:'users/users',locals:{users:@followings} %>
+  </div>
+  <div class="followers">
+    <%= render partial:'users/users',locals:{users:@followers} %>
+  </div>
+</div>

@@ -1,0 +1,5 @@
+<div class="col-md-4">
+  <h4><%= link_to question.user.name,user_path(question.user) %></h4>
+  <h4><%= link_to question.title,question_path(question) %></h4>
+  <p><%= question.description %></p>
+</div>

@@ -1,0 +1,29 @@
+<div class="col-md-4">
+  <ul class="nav flex-column">
+    <li class="nav-item">
+      <%= link_to root_path do %>
+        <i class="fa fa-home"></i>Home
+      <% end %>
+    </li>
+    <li class="nav-item">
+      <%= link_to topics_path do %>
+        <i class="fa fa-clipboard"></i>All Topics
+      <% end %>
+    </li>
+    <li class="nav-item">
+      <%= link_to users_path do %>
+        <i class="fa fa-users"></i>Users
+      <% end %>
+    </li>
+    <li class="nav-item">
+      <%= link_to questions_user_path(current_user) do %>
+        <i class="fa fa-question-circle"></i>Questions
+      <% end %>
+    </li>
+    <li class="nav-item">
+      <%= link_to answers_user_path(current_user) do %>
+        <i class="fa fa-sticky-note"></i>Answers
+      <% end %>
+    </li>
+  </ul>
+</div>
